@@ -32,7 +32,15 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
-
+    .autoProvidejQuery()
+    .autoProvideVariables({
+        "window.jQuery": "jquery",
+        "Popper": "popper.js",
+        "jQuery": "jquery",
+    })
+    .enableSassLoader()
+    .enablePostCssLoader()
+    .enableLessLoader()
     /*
      * FEATURE CONFIG
      *
