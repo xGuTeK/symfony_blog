@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+
+{% block content %}
+    <div class="container-fluid bg-dark text-white">
+        <div class="container">
+            {{ include('blog_header.html.twig') }}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row pt-3 pb-3">
+            <div class="col-md-8">
+                <div class="row">
+                    {{ include('blog_posts.html.twig') }}
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                    {{ include('widget/category_list.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
